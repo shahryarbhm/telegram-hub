@@ -2,9 +2,10 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TelegramService } from './telegram.service';
 import { TelegramController } from './telegram.controller';
+import { AvailModule } from 'src/avail/avail.module';
 
 @Module({
-  imports: [ConfigModule],
+  imports: [ConfigModule,AvailModule],
   providers: [
     TelegramService,
     {

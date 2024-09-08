@@ -26,6 +26,12 @@ importers:
       '@polkadot/api':
         specifier: ^12.4.2
         version: 12.4.2
+      '@polkadot/keyring':
+        specifier: ^13.0.2
+        version: 13.0.2(@polkadot/util-crypto@13.0.2(@polkadot/util@13.0.2))(@polkadot/util@13.0.2)
+      '@polkadot/util-crypto':
+        specifier: ^13.0.2
+        version: 13.0.2(@polkadot/util@13.0.2)
       node-telegram-bot-api:
         specifier: ^0.66.0
         version: 0.66.0(request@2.88.2)
