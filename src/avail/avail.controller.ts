@@ -5,7 +5,7 @@ import { AvailService } from './avail.service';
 @ApiTags('avail')
 @Controller('avail')
 export class AvailController {
-  constructor(private readonly availService: AvailService) {}
+  constructor(private readonly availService: AvailService) { }
 
   @Get('chain-info')
   @ApiOperation({ summary: 'Get chain information' })
@@ -19,11 +19,5 @@ export class AvailController {
   async queryData(@Query('query') query: string) {
     return this.availService.queryData(query);
   }
-
-  @Post('submit-data')
-  @ApiOperation({ summary: 'Submit data to Avail' })
-  @ApiBody({ schema: { type: 'object', properties: { data: { type: 'string' } } } })
-  async submitData(@Body('data') data: string) {
-    return this.availService.submitData(data);
-  }
 }
+

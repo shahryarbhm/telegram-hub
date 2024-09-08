@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TelegramModule } from './telegram/telegram.module';
 import { AvailModule } from './avail/avail.module';
+import { SignModule } from './sign/sign.module';
+import { LitModule } from './lit/lit.module';
 import telegramConfig from './configs/telegram.config';
 
 @Module({
@@ -13,6 +15,8 @@ import telegramConfig from './configs/telegram.config';
     }),
     TelegramModule,
     AvailModule,
+    SignModule,
+    LitModule,
   ],
   controllers: [AppController],
   providers: [AppService],
